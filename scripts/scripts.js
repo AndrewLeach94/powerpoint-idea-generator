@@ -23,11 +23,25 @@ const triggerRandomName = () => {
     nounContainer.textContent = nouns[generateNounNumber(1937, 0)];
 }
 
+const animateText = () => {
+    const text = document.querySelector(".powerpoint-title");
+    text.classList.add("animate-in");
+
+    const cleanUp = () => {
+        text.addEventListener('animationend', () => {
+            text.classList.remove("animate-in"); 
+        });
+    }
+    cleanUp();
+}
+
 const createButtonListener = () => {
     const trigger = document.querySelector("#button_new-name");
     trigger.addEventListener("click", () => {
         triggerRandomName();
+        animateText();
     })
 };
 
 createButtonListener();
+
