@@ -35,11 +35,19 @@ const animateText = () => {
     cleanUp();
 }
 
+const playLottie = () => {
+    console.log("play")
+    const player = document.querySelector("lottie-player");
+    player.seek(0);
+    player.play()
+}
+
 const createButtonListener = () => {
     const trigger = document.querySelector("#button_new-name");
     trigger.addEventListener("click", () => {
         triggerRandomName();
         animateText();
+        playLottie();
     })
 };
 
