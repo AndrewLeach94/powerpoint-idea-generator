@@ -45,6 +45,11 @@ button:active {
     animation: .5s ease-in slideIn;
 }
 
+#animation-container {
+    height: 350px;
+    width: 500px;
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(-5px);
