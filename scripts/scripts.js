@@ -16,11 +16,9 @@ const generateNounNumber = (max, min) => {
 }
 
 const triggerRandomName = () => {
-    const verbContainer = document.querySelector("#random-verb");
     const adjectiveContainer = document.querySelector("#random-adjective");
     const nounContainer = document.querySelector("#random-noun");
 
-    verbContainer.textContent = verbs[generateVerbNumber(633, 0)];
     adjectiveContainer.textContent = adjectives[generateAdjectiveNumber(1099, 0)];
     nounContainer.textContent = nouns[generateNounNumber(1937, 0)];
 }
